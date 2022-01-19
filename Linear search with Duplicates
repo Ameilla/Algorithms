@@ -1,0 +1,36 @@
+#include<stdio.h>
+main()
+{
+    int arr[10],num,i,search,arrtemp[10],j=0,count=0;
+    printf("Enter the size of array:");
+    scanf("%d",&num);
+    printf("Enter the numbers\n");
+    for(i=0;i<num;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("\nEnter the element to search:");
+    scanf("%d",&search);
+    for(i=0;i<num;i++)
+    {
+        if(arr[i]==search)
+        {
+            arrtemp[j]=i;
+            j++;
+            count++;
+        }
+    }
+    if(count>0)
+    {
+        printf("%d is present at index : ",search);
+        num=count;
+        for(i=0;i<num;i++)
+        {
+            printf("%d ",arrtemp[i]);
+        }
+    }
+    else
+    {
+        printf("Element not found");
+    }
+}
